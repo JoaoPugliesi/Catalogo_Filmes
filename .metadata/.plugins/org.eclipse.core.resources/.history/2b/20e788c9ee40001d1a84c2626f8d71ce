@@ -1,0 +1,8 @@
+package br.com.mv.dto;
+
+public class FimeDto {
+
+	private String titulo;
+	private int ano;
+	private String duracao;
+}

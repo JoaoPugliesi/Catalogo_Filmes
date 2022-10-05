@@ -1,0 +1,5 @@
+package br.com.mv.dto;
+
+public class GeneroDto {
+
+}

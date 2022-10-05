@@ -1,0 +1,36 @@
+package br.com.mv.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_filme")
+public class Filme implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String nome;
+	private int ano;
+	private String duracao;
+	
+	public Filme() {
+		
+	}
+	
+	public Filme(Long id, String nome, int ano, String duracao) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.ano = ano;
+		this.duracao = duracao;
+	}
+	
+	
+}

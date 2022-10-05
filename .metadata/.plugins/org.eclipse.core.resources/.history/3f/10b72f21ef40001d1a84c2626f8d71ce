@@ -1,0 +1,26 @@
+package br.com.mv.dto;
+
+import br.com.mv.entity.Filme;
+
+public class FilmeDto {
+
+	private String titulo;
+	private int ano;
+	private String duracao;
+	
+	public FilmeDto() {
+		
+	}
+
+	public FilmeDto(String titulo, int ano, String duracao) {
+		this.titulo = titulo;
+		this.ano = ano;
+		this.duracao = duracao;
+	}
+	
+	public FilmeDto(Filme entity) {
+		this.titulo = entity.getTitulo();
+		this.ano = entity.getAno();
+		this.duracao = entity.getDuracao();
+	}
+}

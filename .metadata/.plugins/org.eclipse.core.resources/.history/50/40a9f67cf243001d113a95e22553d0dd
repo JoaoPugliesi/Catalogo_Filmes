@@ -1,0 +1,10 @@
+package br.com.mv.dto;
+
+public class GeneroDto {
+
+	private String nome;
+	
+	public GeneroDto() {
+		
+	}
+}

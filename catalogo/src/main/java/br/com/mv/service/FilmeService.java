@@ -1,0 +1,35 @@
+package br.com.mv.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.mv.dto.FilmeDto;
+import br.com.mv.entity.Filme;
+import br.com.mv.repository.FilmeRepository;
+
+@Service
+public class FilmeService {
+	
+	@Autowired
+	private FilmeRepository repository;
+
+	public Filme save(Filme filme) {
+		return repository.save(filme);
+	}
+
+	public List<Filme> findAll() {
+		return repository.findAll();
+	}
+
+	public Optional<Filme> findById(Long id) {
+		return repository.findById(id);
+	}
+	
+	public void delete(Filme filme) {
+		repository.delete(filme);
+	}
+
+}
